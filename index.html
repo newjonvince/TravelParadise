@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelBloom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('images/travel-bg.jpg') no-repeat center center/cover;
+      color: white;
+    }
+    nav {
+      background-color: #0077b6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-form {
+      display: flex;
+      gap: 0.5em;
+      margin-top: 0.5em;
+    }
+    .search-form input[type="text"] {
+      padding: 0.5em;
+      width: 200px;
+    }
+    .search-form button {
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border: none;
+      background-color: #023e8a;
+      color: white;
+      font-weight: bold;
+    }
+    .search-form button:hover {
+      background-color: #03045e;
+    }
+    .intro {
+      padding: 2em;
+      background-color: rgba(0,0,0,0.5);
+      margin: 2em;
+      border-radius: 10px;
+    }
+    #results {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: black;
+      padding: 2em;
+      margin: 2em;
+      border-radius: 10px;
+    }
+    #results img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .result-card {
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <input type="text" id="searchInput" placeholder="Search destinations...">
+      <button type="submit">Search</button>
+      <button type="button" onclick="resetSearch()">Reset</button>
+    </form>
+  </nav>
+  <div class="intro">
+    <h1>Welcome to TravelBloom</h1>
+    <p>Your gateway to discovering the world’s best travel destinations. Beaches, temples, and cultural wonders await!</p>
+  </div>
+  <div id="results"></div>
+  <script src="script.js"></script>
+</body>
+</html>
